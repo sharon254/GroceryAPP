@@ -50,7 +50,6 @@ class FlashScreen extends StatelessWidget {
                 TextButton(
                   child: Text("Sign In "),
                   style: TextButton.styleFrom(
-
                       primary: Colors.white,
                       backgroundColor: Colors.green,
                       elevation: 20,
@@ -78,13 +77,13 @@ class FlashScreen extends StatelessWidget {
                         builder: (context) => HomeScreen(),
                       ),
                     );
-
                   },
                 ),
                 SizedBox(
                   height: 30,
                 ),
-                Text('Dont have an account yet?',
+                Text(
+                  'Dont have an account yet?',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 20.0,
@@ -94,15 +93,14 @@ class FlashScreen extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                Text('Sign in',
+                Text(
+                  'Sign in',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20.0,
-
                     decoration: TextDecoration.underline,
                   ),
-
                 ),
               ],
             ),

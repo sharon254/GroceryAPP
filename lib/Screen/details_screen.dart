@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fruit_app/Screen/home_screen.dart';
+
 class DetailScreen extends StatelessWidget {
   const DetailScreen({Key? key}) : super(key: key);
 
@@ -33,7 +34,6 @@ class DetailScreen extends StatelessWidget {
                           children: [
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
                               children: [
                                 FloatingActionButton(
                                   onPressed: () {
@@ -42,12 +42,12 @@ class DetailScreen extends StatelessWidget {
                                         MaterialPageRoute(
                                           builder: (context) => HomeScreen(),
                                         ));
-                                    // Add your onPressed code here!
                                   },
                                   child: const Icon(Icons.arrow_back_ios,
-                                    color: Colors.amber),
+                                      color: Colors.amber),
                                   shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.all(Radius.circular(16.0))),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(16.0))),
                                   backgroundColor: Colors.white,
                                 ),
                                 FloatingActionButton(
@@ -62,7 +62,8 @@ class DetailScreen extends StatelessWidget {
                                   child: const Icon(Icons.shopping_cart,
                                       color: Colors.amber),
                                   shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.all(Radius.circular(16.0))),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(16.0))),
                                   backgroundColor: Colors.white,
                                 ),
                               ],
@@ -82,7 +83,6 @@ class DetailScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-
                     ],
                   ),
                 ),
@@ -153,7 +153,7 @@ class DetailScreen extends StatelessWidget {
                             height: 5,
                           ),
                           Text(
-                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. niesse cillum ',
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. niesse cillum ',
                             style: TextStyle(
                               fontSize: 15,
                               fontFamily: 'Besley',
@@ -165,24 +165,25 @@ class DetailScreen extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-
                     Container(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Icon(Icons.local_fire_department_outlined),
                           Text('69 Calories'),
-                          Icon(Icons.add,
-                          color: Colors.green,),
-                          Text('5 KG',
+                          Icon(
+                            Icons.add,
+                            color: Colors.green,
+                          ),
+                          Text(
+                            '5 KG',
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: Colors.black,
-                            ),),
-                          Icon(Icons.remove,
-                          color: Colors.green),
-
+                            ),
+                          ),
+                          Icon(Icons.remove, color: Colors.green),
                         ],
                       ),
                     )
@@ -197,7 +198,8 @@ class DetailScreen extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        Text('Price',
+                        Text(
+                          'Price',
                           style: TextStyle(
                             fontSize: 15,
                             fontFamily: 'Besley',
@@ -207,35 +209,36 @@ class DetailScreen extends StatelessWidget {
                         SizedBox(
                           height: 5,
                         ),
-                        Text ('Ksh.200',
+                        Text(
+                          'Ksh.200',
                           style: TextStyle(
                             fontSize: 20,
                             fontFamily: 'Besley',
                             color: Colors.black,
-                          ),)
+                          ),
+                        )
                       ],
-
                     ),
                     Column(
                       children: [
                         TextButton(
-                          child: Text("Add to Cart",
+                          child: Text(
+                            "Add to Cart",
                             style: TextStyle(
                               fontSize: 20,
                               fontFamily: 'Besley',
-                            ),),
+                            ),
+                          ),
                           style: TextButton.styleFrom(
-
                               primary: Colors.white,
                               backgroundColor: Colors.green,
                               elevation: 20,
                               minimumSize: Size(100, 50),
-                              padding:
-                              EdgeInsets.symmetric(vertical: 20, horizontal: 50)),
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 20, horizontal: 50)),
                           onPressed: () {},
                         ),
                       ],
-
                     )
                   ],
                 ),
@@ -243,7 +246,6 @@ class DetailScreen extends StatelessWidget {
             ],
           ),
         ),
-
       ),
     );
   }

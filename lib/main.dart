@@ -5,13 +5,14 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_app/Screen/description_screen.dart';
 import 'package:fruit_app/Screen/favourite_screen.dart';
+import 'package:fruit_app/Screen/home2_screen.dart';
 import 'package:fruit_app/Screen/home_screen.dart';
 import 'package:fruit_app/Screen/flash_screen.dart';
 import 'package:fruit_app/Screen/details_screen.dart';
 
 void main() => runApp(MaterialApp(
 
-  home:HomeScreen(),
+  home:Home2Screen(),
   debugShowCheckedModeBanner: false,
 
 ));
