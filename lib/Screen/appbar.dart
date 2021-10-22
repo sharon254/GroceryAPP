@@ -2,9 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruit_app/Screen/constants.dart';
+import 'package:fruit_app/Screen/details_screen.dart';
+import 'package:fruit_app/Screen/home1_screen.dart';
+import 'package:fruit_app/Screen/home_screen.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -78,58 +82,7 @@ class Body extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(
-              left: kDefaultPadding,
-              top: kDefaultPadding / 2,
-              bottom: kDefaultPadding * 2.5,
-            ),
-            width: size.width * 0.4,
-            child: Column(
-              children: [
-                Image.asset('name'),
-                GestureDetector(
-                  onTap: (){},
-                  child: Container(
-                    padding: EdgeInsets.all(kDefaultPadding / 2),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(10),
-                        bottomRight: Radius.circular(10),
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          offset: Offset(0, 10),
-                          blurRadius: 50,
-                          color: kPrimaryColor.withOpacity(0.23),
-                        )
-                      ]
-                    ),
-                    child: Row(
-                      children: [
-                        RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(
-                                  text: "Hello".toUpperCase(),
-                                  style: Theme.of(context).textTheme.button),
-                              TextSpan(
-                                  text: "Today".toUpperCase(),
-                                  style: Theme.of(context).textTheme.button),
-                            ]
-                    ),
-
-                          ),
-
-                      ],
-                    ),
-
-                  ),
-                )
-              ],
-            ),
-          )
+          
 
         ],
       ),
@@ -152,7 +105,7 @@ class Body extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  'Hi Uishopy!',
+                  'Hi Fruity',
                   style: Theme.of(context).textTheme.headline5!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
@@ -162,4 +115,17 @@ class Body extends StatelessWidget {
             ),
           );
   }
+}
+
+
+class BodyLayout extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return _myListView(context);
+  }
+}
+
+// replace this function with the code in the examples
+Widget _myListView(BuildContext context) {
+  return ListView();
 }

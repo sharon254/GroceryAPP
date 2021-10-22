@@ -1,9 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fruit_app/Screen/home_screen.dart';
+import 'package:fruit_app/Screen/my_controller.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'my_controller.dart';
+import 'package:get/get.dart';
 
 class DetailScreen extends StatelessWidget {
-  const DetailScreen({Key? key}) : super(key: key);
+   DetailScreen({Key? key}) : super(key: key);
+  final MyController c = Get.put(MyController());
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +21,7 @@ class DetailScreen extends StatelessWidget {
               Container(
                 child: SizedBox(
                   width: 600,
-                  height: 350,
+                  height: 300,
                   child: Stack(
                     children: [
                       Container(
@@ -90,7 +95,7 @@ class DetailScreen extends StatelessWidget {
               Container(
                 padding: EdgeInsets.all(20),
                 margin: EdgeInsets.all(10),
-                height: size.height * 0.30,
+                height: size.height * 0.35,
                 width: size.width * 0.95,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
@@ -171,19 +176,49 @@ class DetailScreen extends StatelessWidget {
                         children: [
                           Icon(Icons.local_fire_department_outlined),
                           Text('69 Calories'),
-                          Icon(
-                            Icons.add,
-                            color: Colors.green,
+                          Container(
+                            width: 50,
+                            height: 50,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                color: Colors.green
+                            ),
+                            child: IconButton(onPressed: () { c.increment();  },
+                              icon: const Icon(Icons.add,
+                                color: Colors.white,),
+
+                            ),
+
                           ),
-                          Text(
+                          Obx(() => Text('${c.KGS.toString()}',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
+                          )),
+                          /* Text(
                             '5 KG',
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: Colors.black,
                             ),
+                          ),*/
+                          Container(
+                            width: 50,
+                            height: 50,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                color: Colors.green
+                            ),
+                            child: IconButton(onPressed: () { c.decrement();  },
+                              icon: const Icon(Icons.remove,
+                              color: Colors.white,),
+
+                            ),
+
                           ),
-                          Icon(Icons.remove, color: Colors.green),
                         ],
                       ),
                     )

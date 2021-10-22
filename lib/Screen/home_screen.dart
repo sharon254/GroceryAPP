@@ -1,11 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:fruit_app/Screen/description_screen.dart';
-import 'package:fruit_app/Screen/favourite_screen.dart';
+import 'package:fruit_app/Screen/testscreen/description_screen.dart';
+import 'package:fruit_app/Screen/testscreen/favourite_screen.dart';
 import 'package:fruit_app/models/models.dart';
 import 'package:fruit_app/models/fruit_model.dart';
 import 'package:fruit_app/Screen/details_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:fruit_app/Screen/drawer.dart';
+
+import 'testscreen/details2_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -41,8 +45,9 @@ class _HomeScreenState extends State<HomeScreen> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
+
       appBar: AppBar(
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.green,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(20),
@@ -59,22 +64,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Welcome to,',
+                    'Welcome ,',
                     style: TextStyle(
                         color: Colors.black38, fontWeight: FontWeight.w500),
                   ),
-                  Text(
-                    'Fruity',
-                    style: TextStyle(
-                        color: Colors.black38, fontWeight: FontWeight.bold),
-                  ),
-
                 ],
               ),
               Row(
                 children: [
-                  CircleAvatar(
-                    backgroundImage: AssetImage('assets/profile2.jpg'),
+                  GestureDetector(
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage('assets/profile2.jpg'),
+
+                    ),
                   ),
                 ],
               ),
@@ -104,6 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
+      drawer: NavigationDrawerWidget(),
       body: CustomScrollView(
         controller: _sc,
         slivers: [
@@ -304,21 +307,21 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.search,
-              color: Colors.grey,
+              color: Colors.green,
             ),
             label: ('search'),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.shopping_cart,
-              color: Colors.grey,
+              color: Colors.green,
             ),
             label: ('Cart'),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.favorite_border,
-              color: Colors.grey,
+              color: Colors.green,
             ),
             label: ('Favourite'),
           ),
@@ -333,3 +336,4 @@ class FoodCategory {
 
   FoodCategory(this.name, this.image);
 }
+

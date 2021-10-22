@@ -2,8 +2,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 
-import 'package:fruit_app/Screen/description_screen.dart';
-import 'package:fruit_app/Screen/favourite_screen.dart';
+import 'package:fruit_app/Screen/testscreen/description_screen.dart';
+import 'package:fruit_app/Screen/testscreen/favourite_screen.dart';
 import 'package:fruit_app/Screen/home_screen.dart';
 
 class DescriptionScreen extends StatelessWidget {
